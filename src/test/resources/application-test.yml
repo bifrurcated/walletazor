@@ -1,0 +1,15 @@
+server:
+  port: 8000
+logging:
+  level:
+    root: INFO
+spring:
+  datasource:
+    url: r2dbc:tc:postgresql:14.1:///test
+    username: test
+    password: test
+    hikari:
+      connectionTimeout: 300000
+  liquibase:
+    enabled: true
+    contexts: test
